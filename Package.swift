@@ -4,29 +4,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "support.apple.appkit",
+    name: "Tyler.Support.Apple.AppKit",
     products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
-        .library(
-            name: "support.apple.appkit",
-            targets: ["support.apple.appkit"]),
+        .library(name: "Tyler.Support.Apple.AppKit", targets: ["TylerSupportAppleAppKit"]),
     ],
     dependencies: [
-        .package(url: "../variable/", .branch("master")),
-        .package(url: "../style/", .branch("master")),
-        .package(url: "../tag/", .branch("master")),
-        .package(url: "../substitutes/", .branch("master")),
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/IgorMuzyka/Tyler.Variable", .branch("master")),
+        .package(url: "https://github.com/IgorMuzyka/Tyler.Style", .branch("master")),
+        .package(url: "https://github.com/IgorMuzyka/Tyler.Tag", .branch("master")),
+        .package(url: "https://github.com/IgorMuzyka/Tyler.Substitutes", .branch("master")),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
-        .target(
-            name: "support.apple.appkit",
-            dependencies: ["variable", "style", "tag", "substitutes"]),
-        .testTarget(
-            name: "support.apple.appkitTests",
-            dependencies: ["support.apple.appkit"]),
+        .target(name: "TylerSupportAppleAppKit", dependencies: [
+            "Tyler.Variable", 
+            "Tyler.Style", 
+            "Tyler.Tag", 
+            "Tyler.Substitutes"
+        ]),
     ]
 )

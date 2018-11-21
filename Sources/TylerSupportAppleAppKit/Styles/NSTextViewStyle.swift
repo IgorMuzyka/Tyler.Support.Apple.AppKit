@@ -1,8 +1,8 @@
 
-import variable
-import substitutes
-import style
-import tag
+import Variable
+import Substitutes
+import Style
+import Tag
 
 public enum NSTextViewStyle: Style {
 

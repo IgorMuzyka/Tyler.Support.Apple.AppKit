@@ -1,7 +1,7 @@
 
-import style
-import tag
-import variable
+import Style
+import Tag
+import Variable
 
 #if os(macOS)
 import AppKit
