@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 
-	s.name = "Tyler Support Apple AppKit"
+	s.name = "Tyler.Support.Apple.AppKit"
 	s.version = "0.0.1"
 	s.swift_version = "4.2"
 	s.summary = "Tyler Support Apple AppKit"
