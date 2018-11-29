@@ -10,6 +10,8 @@ open class NSScrollViewStylist: GenericStylist {
 
     public static var keyPath: AnyKeyPath?
 
+    public required init() {}
+
     public func style(stylable scrollView: NSScrollView, style: NSScrollViewStyle, tags: [Tag], pair: VariableResolutionPair) throws {
         switch style {
         case .contentInsets(let value): scrollView.contentInsets = try value.resolve(pair).native

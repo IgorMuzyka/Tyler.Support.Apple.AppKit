@@ -10,6 +10,8 @@ open class NSTextViewStylist: GenericStylist {
 
     public static var keyPath: AnyKeyPath?
 
+    public required init() {}
+
     public func style(stylable textView: NSTextView, style: NSTextViewStyle, tags: [Tag], pair: VariableResolutionPair) throws {
         switch style {
         case .text(let value): textView.string = try value.resolve(pair)

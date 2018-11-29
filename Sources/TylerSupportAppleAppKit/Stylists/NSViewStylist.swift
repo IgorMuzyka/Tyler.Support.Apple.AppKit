@@ -10,6 +10,8 @@ open class NSViewStylist: GenericStylist {
 
 	public static var keyPath: AnyKeyPath?
 
+    public required init() {}
+
 	public func style(stylable view: NSView, style: NSViewStyle, tags: [Tag], pair: VariableResolutionPair) throws {
 		switch style {
 		case .wantsLayer(let value): view.wantsLayer = try value.resolve(pair)
