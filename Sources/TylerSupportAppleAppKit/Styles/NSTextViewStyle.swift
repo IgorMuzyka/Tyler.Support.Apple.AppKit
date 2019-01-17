@@ -3,6 +3,7 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum NSTextViewStyle: Style {
 
@@ -19,6 +20,11 @@ public enum NSTextViewStyle: Style {
     case backgroundColor(Variable<Color>)
 //    case typingAttributes
 
+}
+
+extension NSTextViewStyle {
+
+    public static var alias: Alias = "NSTextViewStyle"
 }
 
 extension NSTextViewStyle: Codable {

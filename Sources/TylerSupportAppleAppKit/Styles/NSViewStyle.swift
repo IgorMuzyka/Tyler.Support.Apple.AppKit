@@ -3,6 +3,7 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum NSViewStyle: Style {
 
@@ -10,6 +11,11 @@ public enum NSViewStyle: Style {
 	case translatesAutoresizingMaskIntoConstraints(Variable<Bool>)
 	case alphaValue(Variable<Number>)
 	case isHidden(Variable<Bool>)
+}
+
+extension NSViewStyle {
+
+    public static var alias: Alias = "NSViewStyle"
 }
 
 extension NSViewStyle: Codable {

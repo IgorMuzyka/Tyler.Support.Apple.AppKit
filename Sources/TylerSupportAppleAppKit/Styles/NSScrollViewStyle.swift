@@ -3,6 +3,7 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum NSScrollViewStyle: Style {
 
@@ -17,6 +18,11 @@ public enum NSScrollViewStyle: Style {
     case scrollerKnobStyle(Variable<ScrollerKnobStyle>)
     case rulersVisible(Variable<Bool>)
     case scrollsDynamically(Variable<Bool>)
+}
+
+extension NSScrollViewStyle {
+
+    public static var alias: Alias = "NSScrollViewStyle"
 }
 
 extension NSScrollViewStyle: Codable {

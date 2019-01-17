@@ -3,6 +3,7 @@ import Variable
 import Substitutes
 import Style
 import Tag
+import TypePreservingCodingAdapter
 
 public enum NSButtonStyle: Style {
 
@@ -18,6 +19,11 @@ public enum NSButtonStyle: Style {
     case imageHugsTitle(Variable<Bool>)
     case bezelColor(Variable<Color>)
     case bezelStyle(Variable<AppKitBezelStyle>)
+}
+
+extension NSButtonStyle {
+
+    public static var alias: Alias = "NSButtonStyle"
 }
 
 extension NSButtonStyle: Codable {
