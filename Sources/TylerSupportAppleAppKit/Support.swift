@@ -35,17 +35,11 @@ extension StylistsStore {
 extension TypePreservingCodingAdapter {
 
     public func registerAppKitSupportStyles() {
-        register(type: CALayerStyle.self)
-        register(alias: CALayerStyle.alias, for: CALayerStyle.self)
-        register(type: NSViewStyle.self)
-        register(alias: NSViewStyle.alias, for: NSViewStyle.self)
-        register(type: NSControlStyle.self)
-        register(alias: NSControlStyle.alias, for: NSControlStyle.self)
-        register(type: NSTextViewStyle.self)
-        register(alias: NSTextViewStyle.alias, for: NSTextViewStyle.self)
-        register(type: NSButtonStyle.self)
-        register(alias: NSButtonStyle.alias, for: NSButtonStyle.self)
-        register(type: NSScrollViewStyle.self)
-        register(alias: NSScrollViewStyle.alias, for: NSControlStyle.self)
+        register(style: CALayerStyle.self)
+        register(style: NSViewStyle.self)
+        register(style: NSControlStyle.self)
+        register(style: NSTextViewStyle.self)
+        register(style: NSButtonStyle.self)
+        register(style: NSScrollViewStyle.self)
     }
 }
